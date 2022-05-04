@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Truncated Content Web Component</title>
+  </head>
+  <body>
+    <section>
+      <h2>Single content block with <code>&lt;!--more--&gt;</code></h2>
+      <truncated-content>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et
+          gravida neque. Vivamus eleifend iaculis rhoncus. Etiam sed
+          sollicitudin justo. Pellentesque vitae felis lorem. Proin sed
+          sollicitudin massa. Maecenas quis sapien purus. Aliquam varius magna
+          purus, nec viverra neque faucibus in<!--more-->. Donec suscipit eros eu sem
+          laoreet, sit amet pharetra ipsum ultricies. Nulla posuere tempor
+          rhoncus.
+      </truncated-content>
+    </section>
+    <section>
+      <h2>Multiple paragraphs with <code>&lt;!--more--&gt;</code></h2>
+      <truncated-content>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et
+          gravida neque. Vivamus eleifend iaculis rhoncus. Etiam sed
+          sollicitudin justo. Pellentesque vitae felis lorem. Proin sed
+          sollicitudin massa. Maecenas quis sapien purus. Aliquam varius magna
+          purus, nec viverra neque faucibus in. Donec suscipit eros eu<!--more--> sem
+          laoreet, sit amet pharetra ipsum ultricies. Nulla posuere tempor
+          rhoncus.
+        </p>
+
+        <p>
+          Pellentesque eleifend leo neque, in tristique dui sodales a. Phasellus
+          tempor consectetur elit, id feugiat massa egestas convallis. Maecenas
+          tincidunt interdum dui, luctus finibus augue dictum nec. Sed nec
+          iaculis enim. Mauris convallis, augue eu suscipit fermentum, dui ipsum
+          imperdiet quam, a ullamcorper dolor lorem nec eros. Proin sodales sed
+          neque ac dictum. Class aptent taciti sociosqu ad litora torquent per
+          conubia nostra, per inceptos himenaeos. Sed nisi tellus, suscipit at
+          aliquet ut, pharetra et velit.
+        </p>
+
+        <p>
+          Nullam at sodales turpis. Donec gravida nulla ac libero semper, nec
+          cursus leo gravida. Quisque dolor eros, ullamcorper vel lectus vel,
+          placerat tristique leo. Mauris volutpat nisl fermentum nibh interdum,
+          vel finibus sapien viverra. Quisque et nisi est. Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit. Morbi fringilla magna porta mollis
+          rutrum. Vestibulum eget lorem nec ex sollicitudin convallis at vitae
+          eros. Duis sed porttitor nunc, at efficitur mauris. Aliquam tempus sed
+          dui a consequat. Nam vel nisl nec arcu interdum pharetra. Aliquam
+          sodales non turpis eget malesuada. Mauris eleifend massa pulvinar
+          nulla ullamcorper, non hendrerit magna malesuada. Vivamus bibendum
+          euismod ipsum, ut interdum erat imperdiet ut.
+        </p>
+        <a href="foo" slot="show-more">Show me moar</a>
+        <a href="foo" slot="show-less">It's too much!</a>
+      </truncated-content>
+    </section>
+    <section>
+      <h2>Complex nested <code>&lt;!--more--&gt;</code></h2>
+      <truncated-content>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et
+          gravida neque. Vivamus eleifend iaculis rhoncus. Etiam sed
+          sollicitudin justo. Pellentesque vitae felis lorem. Proin sed
+          sollicitudin massa. Maecenas quis sapien purus. Aliquam varius magna
+          purus, nec viverra neque faucibus in. Donec suscipit eros eu sem
+          laoreet, sit amet pharetra ipsum ultricies. Nulla posuere tempor
+          rhoncus.
+        </p>
+
+        <p>
+          Pellentesque eleifend leo neque, in tristique dui sodales a. Phasellus
+          tempor consectetur elit, id feugiat massa egestas convallis. Maecenas
+          tincidunt interdum dui, luctus finibus augue dictum nec. Sed nec
+          iaculis enim. <u><!--more-->Mauris convallis</u>, augue eu suscipit fermentum, dui ipsum
+          imperdiet quam, a ullamcorper dolor lorem nec eros. Proin sodales sed
+          neque ac dictum. Class aptent taciti sociosqu ad litora torquent per
+          conubia nostra, per inceptos himenaeos. Sed nisi tellus, suscipit at
+          aliquet ut, pharetra et velit.
+        </p>
+
+        <p>
+          Nullam at sodales turpis. Donec gravida nulla ac libero semper, nec
+          cursus leo gravida. Quisque dolor eros, ullamcorper vel lectus vel,
+          placerat tristique leo. Mauris volutpat nisl fermentum nibh interdum,
+          vel finibus sapien viverra. Quisque et nisi est. Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit. Morbi fringilla magna porta mollis
+          rutrum. Vestibulum eget lorem nec ex sollicitudin convallis at vitae
+          eros. Duis sed porttitor nunc, at efficitur mauris. Aliquam tempus sed
+          dui a consequat. Nam vel nisl nec arcu interdum pharetra. Aliquam
+          sodales non turpis eget malesuada. Mauris eleifend massa pulvinar
+          nulla ullamcorper, non hendrerit magna malesuada. Vivamus bibendum
+          euismod ipsum, ut interdum erat imperdiet ut.
+        </p>
+      </truncated-content>
+    </section>
+    <section>
+      <h2>No <code>&lt;!--more--&gt;</code></h2>
+      <truncated-content>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et
+          gravida neque. Vivamus eleifend iaculis rhoncus. Etiam sed
+          sollicitudin justo. Pellentesque vitae felis lorem. Proin sed
+          sollicitudin massa. Maecenas quis sapien purus. Aliquam varius magna
+          purus, nec viverra neque faucibus in. Donec suscipit eros eu sem
+          laoreet, sit amet pharetra ipsum ultricies. Nulla posuere tempor
+          rhoncus.
+        </p>
+      </truncated-content>
+    </section>
+    <section>
+      <h2>Expanded by default</h2>
+      <truncated-content expanded>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et
+          gravida neque. Vivamus eleifend iaculis rhoncus. Etiam sed
+          sollicitudin justo. Pellentesque vitae felis lorem. Proin sed
+          sollicitudin massa. Maecenas quis sapien purus. Aliquam varius magna
+          purus, nec viverra neque faucibus in<!--more-->. Donec suscipit eros eu sem
+          laoreet, sit amet pharetra ipsum ultricies. Nulla posuere tempor
+          rhoncus.
+      </truncated-content>
+    </section>
+    <script type="module" src="/preview/main.ts"></script>
+  </body>
+</html>
