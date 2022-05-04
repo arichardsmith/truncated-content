@@ -49,6 +49,24 @@ export function extractAllFollowingNodes(
 }
 
 /**
+ * Lift the placehold element up a level if it is the first or last node of it's parent element
+ * @param placeholder {Node}
+ */
+export function adjustPlaceholderLocation(placeholder: Node) {
+  if (!placeholder.nextSibling) {
+    // Move it after the parent if it is the last child
+    placeholder.parentElement?.after(
+      placeholder.parentElement.removeChild(placeholder)
+    )
+  } else if (!placeholder.previousSibling) {
+    // Move it before the parent if it is the last child
+    placeholder.parentElement?.before(
+      placeholder.parentElement.removeChild(placeholder)
+    )
+  }
+}
+
+/**
  * Iterate through an element's children
  * @param element {HTMLElement}
  */

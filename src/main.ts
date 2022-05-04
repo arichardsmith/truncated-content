@@ -1,4 +1,4 @@
-import { extractAllFollowingNodes, findMoreComment } from './dom'
+import { adjustPlaceholderLocation, extractAllFollowingNodes, findMoreComment } from './dom'
 import { getStylesheet } from './style'
 
 enum LINK_TYPE {
@@ -63,6 +63,8 @@ export class TruncatedContent extends HTMLElement {
     this._placeholder = findMoreComment(this)
 
     if (this._placeholder) {
+      adjustPlaceholderLocation(this._placeholder)
+
       this._nodesPostPlaceholder = extractAllFollowingNodes(
         this,
         this._placeholder
