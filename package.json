@@ -1,5 +1,6 @@
 {
   "name": "truncated-content",
+  "description": "A custom element that truncates content after a marker element",
   "private": true,
   "version": "0.1.0",
   "files": [
